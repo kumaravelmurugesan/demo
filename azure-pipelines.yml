@@ -32,7 +32,7 @@ steps:
     command: buildAndPush
     repository: demo
     tags: latest
-    #Dockerfile: 'target/**/Dockerfile'
+    Dockerfile: 'target/**/Dockerfile'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
