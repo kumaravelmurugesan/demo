@@ -109,7 +109,7 @@
 				</executions>
 				<configuration>
 					<buildArgs>
-						<JAR_FILE>${project.artifactId}-${project.version}-SNAPSHOT.jar</JAR_FILE>
+						<JAR_FILE>${project.artifactId}-${project.version}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
 			</plugin>
