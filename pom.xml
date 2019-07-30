@@ -75,7 +75,12 @@
 	</dependencies>
 
 	<build>
-		<finalName>demo</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/docker</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -86,8 +91,8 @@
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<classifier>spring-boot</classifier>
 							<mainClass>com.example.demo.DemoApplication</mainClass>
+
 						</configuration>
 					</execution>
 				</executions>
