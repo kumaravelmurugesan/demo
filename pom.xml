@@ -91,11 +91,27 @@
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<classifier>repackage</classifier>
 							<mainClass>com.example.demo.DemoApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<buildArgs>
+						<JAR_FILE>${project.artifactId}-${project.version}-SNAPSHOT.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
