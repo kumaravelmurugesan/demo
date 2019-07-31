@@ -109,8 +109,8 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>***/demo</repository>
-					<tag>latest</tag>
+					<repository>/demo</repository>
+					<tag>***/demo/latest</tag>
 					<buildArgs>
 						<JAR_FILE>${project.artifactId}-${project.version}.jar</JAR_FILE>
 					</buildArgs>
