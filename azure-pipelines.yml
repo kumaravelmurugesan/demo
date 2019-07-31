@@ -15,7 +15,6 @@ steps:
   inputs:
     command: login
     containerRegistry: ARCSBACR
-
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -32,14 +31,11 @@ steps:
     command: buildAndPush
     repository: demo
     tags: latest
-#- task: Docker@2
-#  displayName: Build
-#  inputs:
-#    command: push
-#    repository: demo
-#    tags: latest
-
-
+- task: Docker@2
+  displayName: Logout to Azure Container Registry
+  inputs:
+    command: logout
+    containerRegistry: ARCSBACR
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
